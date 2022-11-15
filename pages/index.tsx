@@ -14,6 +14,7 @@ export default function Home() {
 			</Head>
 
 			<main>
+				<h1>🍄 Track 🍄</h1>
 				<Calendar />
 			</main>
 		</section>
