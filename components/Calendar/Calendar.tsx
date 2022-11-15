@@ -1,7 +1,18 @@
+import React from "react";
 import { MonthlyCalendar as RainbowCalendar } from "react-rainbow-components";
 
-const Calendar: React.FC = () => {
-	return <RainbowCalendar />;
-};
+import { Context } from "../../context/Provider";
 
-export default Calendar;
+export default function Calendar() {
+	const { openDrawer } = React.useContext(Context);
+
+	const [currentMonth, setCurrentMonth] = React.useState(new Date());
+
+	return (
+		<RainbowCalendar
+			currentMonth={currentMonth}
+			onMonthChange={({ month }) => setCurrentMonth(month)}
+			onSelectDate={openDrawer}
+		/>
+	);
+}

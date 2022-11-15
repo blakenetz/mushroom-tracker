@@ -1,5 +1,8 @@
 import Head from "next/head";
+
+import Provider from "../context/Provider";
 import Calendar from "../components/Calendar";
+import Drawer from "../components/Drawer";
 
 export default function Home() {
 	return (
@@ -15,7 +18,10 @@ export default function Home() {
 
 			<main>
 				<h1>🍄 Track 🍄</h1>
-				<Calendar />
+				<Provider>
+					<Calendar />
+					<Drawer />
+				</Provider>
 			</main>
 		</section>
 	);
