@@ -4,7 +4,7 @@ import Provider from "../context/Provider";
 import Calendar from "../components/Calendar";
 import Drawer from "../components/Drawer";
 
-export default function Home() {
+export default function Index() {
 	return (
 		<section>
 			<Head>
