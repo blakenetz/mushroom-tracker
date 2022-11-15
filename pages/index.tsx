@@ -3,6 +3,7 @@ import Head from "next/head";
 import Provider from "../context/Provider";
 import Calendar from "../components/Calendar";
 import Drawer from "../components/Drawer";
+import Header from "../components/Header";
 
 export default function Index() {
 	return (
@@ -17,8 +18,9 @@ export default function Index() {
 			</Head>
 
 			<main>
-				<h1>🍄 Track 🍄</h1>
 				<Provider>
+					<Header />
+					<h1>🍄 Track 🍄</h1>
 					<Calendar />
 					<Drawer />
 				</Provider>
