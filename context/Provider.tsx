@@ -9,7 +9,7 @@ interface ContextValue {
 export const Context = React.createContext({} as ContextValue);
 
 const Provider: React.FC<React.PropsWithChildren> = ({ children }) => {
-	const [showDrawer, setShowDrawer] = React.useState(true);
+	const [showDrawer, setShowDrawer] = React.useState(false);
 
 	return (
 		<Context.Provider

@@ -2,6 +2,7 @@ import React from "react";
 import { MonthlyCalendar as RainbowCalendar } from "react-rainbow-components";
 
 import { Context } from "../../context/Provider";
+import DateCell from "./DateCell/DateCell";
 
 export default function Calendar() {
 	const { openDrawer } = React.useContext(Context);
@@ -12,7 +13,8 @@ export default function Calendar() {
 		<RainbowCalendar
 			currentMonth={currentMonth}
 			onMonthChange={({ month }) => setCurrentMonth(month)}
-			onSelectDate={openDrawer}
+			// onSelectDate={openDrawer}
+			dateComponent={DateCell}
 		/>
 	);
 }
